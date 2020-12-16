@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj": {}
+  },
+  "projects": {
+    "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj",
+        "projectName": "Melembre v2",
+        "projectPath": "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj",
+        "packagesPath": "C:\\Users\\joaoc\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\joaoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.Windows.SDK.Contracts": {
+              "target": "Package",
+              "version": "[10.0.19041.1, )"
+            }
+          },
+          "imports": [
+            "uap10.0.19041"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

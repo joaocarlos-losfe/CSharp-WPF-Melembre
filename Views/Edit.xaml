@@ -1,0 +1,136 @@
+﻿<Window x:Class="Melembre_v2.Views.Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Melembre_v2.Views"
+        mc:Ignorable="d"
+        Title="Editar lembrete" Height="630" Width="874" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" Background="White">
+
+    <Border Padding="30">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <!--Coluna 1 definicao do lembrete-->
+            <Grid Grid.Column="0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="5,0,5,0">
+                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Lembrete"/>
+                    <TextBox x:Name="input_txt" TextWrapping="Wrap" MaxLines="3" MaxLength="185" TextAlignment="Justify" Margin="0,14,0,0" FontSize="15" Height="90" Foreground="#9A9A9A" FontWeight="SemiBold" Padding="5" BorderBrush="Transparent">
+                        <TextBox.Effect>
+                            <DropShadowEffect ShadowDepth="1" Opacity="0.3" Color="#FF999999"/>
+                        </TextBox.Effect>
+                    </TextBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="5,0,5,0">
+                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56"  Text="Prioridade"/>
+                    <TextBlock FontSize="18" FontWeight="SemiBold" Foreground="#9A9A9A" TextWrapping="Wrap" Text="Clique em uma cor desejada para definir uma prioridade." />
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <Button x:Name="high_btn" Click="high_btn_Click" Padding="5"  Background="Transparent" BorderBrush="Transparent"  >
+                            <StackPanel Orientation="Vertical">
+                                <Rectangle  Width="30" Height="30" RadiusX="100" RadiusY="100" Fill="#FF4841" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                                <TextBlock FontSize="18" FontWeight="SemiBold" Foreground="#514F56" Text="Alta" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="average_button" Click="average_button_Click" Margin="50,0,0,0" Padding="5" Background="Transparent" BorderBrush="Transparent"  >
+                            <StackPanel Orientation="Vertical">
+                                <Rectangle  Width="30" Height="30" RadiusX="100" RadiusY="100" Fill="#FBB452" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                                <TextBlock FontSize="18" FontWeight="SemiBold" Foreground="#514F56" Text="Média" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="low_button" Click="low_button_Click" Margin="50,0,0,0" Padding="5" Background="Transparent" BorderBrush="Transparent"  >
+                            <StackPanel Orientation="Vertical">
+                                <Rectangle  Width="30" Height="30" RadiusX="100" RadiusY="100" Fill="#99EFD5" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                                <TextBlock FontSize="18" FontWeight="SemiBold" Foreground="#514F56" Text="Baixa" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Margin="0,30,0,40">
+                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#9A9A9A"  Text="Prioridade definida"/>
+                    <Grid x:Name="selected_color_priority"  Margin="0,14,0,0" Height="53" Width="175" HorizontalAlignment="Left" Background="#FF4841">
+                        <TextBlock x:Name="selected_text_priority" Text="Alta" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="SemiBold" Foreground="White"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1" Margin="50,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Margin="5,0,5,0">
+                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Categoria"/>
+                    <ComboBox x:Name="category_selected" Margin="0,14,0,0" Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100" >
+                        <ComboBoxItem Content="Social" IsSelected="True"/>
+                        <ComboBoxItem Content="Médicação"/>
+                        <ComboBoxItem Content="Lazer"/>
+                        <ComboBoxItem Content="Financeiro"/>
+                        <ComboBoxItem Content="Estudos"/>
+                        <ComboBoxItem Content="Contas"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="5,0,5,0">
+                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Frequencia"/>
+                    <ComboBox x:Name="frequency_select" Margin="0,14,0,0" Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100" >
+                        <ComboBoxItem Content="Uma vez" IsSelected="True" />
+                        <ComboBoxItem Content="Todo dia"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Margin="5,30,5,0">
+                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Lembrar as"/>
+                    <Grid Margin="0,14,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                            <TextBlock FontSize="15" FontWeight="SemiBold" Foreground="#9A9A9A" Text="Hora" />
+                            <ComboBox x:Name="hour_select"  Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100">
+                                <ComboBoxItem Content="12" IsSelected="True"/>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                            <TextBlock FontSize="15" FontWeight="SemiBold" Foreground="#9A9A9A" Text="Minuto(s)" />
+                            <ComboBox x:Name="minut_select" Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100">
+                                <ComboBoxItem Content="00" IsSelected="True"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Button x:Name="save_buttom" Click="save_buttom_Click" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Background="Transparent" BorderBrush="Transparent" FontWeight="Bold" Foreground="#6A686D" Content="Salvar"/>
+        </Grid>
+    </Border>
+</Window>

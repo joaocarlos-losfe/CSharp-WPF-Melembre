@@ -1,0 +1,36 @@
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\runtimes\win-x64\native\e_sqlite3.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\runtimes\win-arm\native\e_sqlite3.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\Melembre v2.exe.config
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\Melembre v2.exe
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\Melembre v2.pdb
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\Microsoft.Data.Sqlite.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\SQLitePCLRaw.nativelibrary.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\SQLitePCLRaw.core.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Buffers.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Memory.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Numerics.Vectors.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.csprojAssemblyReference.cache
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.exe.config
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\App.g.cs
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2_Content.g.cs
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2_MarkupCompile.cache
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2_MarkupCompile.lref
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.g.resources
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre_v2.Properties.Resources.resources
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.csproj.GenerateResource.cache
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.csproj.CoreCompileInputs.cache
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.csproj.CopyComplete
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.exe
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.pdb
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Home.g.cs
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Reminder Alert.g.cs
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Home.baml
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Reminder Alert.baml
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Add.g.cs
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Add.baml
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Edit.g.cs
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Edit.baml
