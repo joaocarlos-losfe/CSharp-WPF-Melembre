@@ -35,13 +35,12 @@ namespace Melembre_v2.Models
                     Is_concluded VARCHAR NOT NULL,
                     Concluded_color VARCHAR NOT NULL,
                     Concluded_text VARCHAR NOT NULL,
-                    _Horario VARCHAR NOT NULL,
-                    PRIMARY KEY (_Horario)
+                    _Horario VARCHAR NOT NULL PRiMARY KEY
                 )";
 
                 command.Connection = connection;
 
-                command.ExecuteNonQueryAsync();
+                command.ExecuteNonQuery();
 
                 connection.Close();
             }
@@ -56,7 +55,7 @@ namespace Melembre_v2.Models
             {
                 connection.Open();
 
-                command.CommandText = $@"INSERT INTO Reminders
+                command.CommandText = $@"INSERT INTO Reminders (Reminder_text, Priority, Priority_color, Category, Frequency, Is_concluded, Concluded_color, Concluded_text, _Horario )
                 VALUES
                 (
                     '{reminder.Reminder_text}',
@@ -99,6 +98,7 @@ namespace Melembre_v2.Models
                 {
                     Reminder reminder = new Reminder();
 
+                    
                     reminder.Reminder_text = dataReader["Reminder_text"].ToString();
                     reminder.Priority = dataReader["Priority"].ToString();
                     reminder.Priority_color = dataReader["Priority_color"].ToString();
@@ -121,9 +121,32 @@ namespace Melembre_v2.Models
             return reminders;
         }
 
-        public void alterDataBase(Reminder reminder, string reminder_hour)
+        public void update(Reminder reminder, string reminder_hour)
         {
-           
+            connection = new SqliteConnection(aplication_root_directory);
+
+            using (connection)
+            {
+                connection.Open();
+                command.Connection = connection;
+
+                command.CommandText = $@"UPDATE Reminders SET
+                Reminder_text  = '{reminder.Reminder_text}',
+                Priority       = '{reminder.Priority}',
+                Priority_color = '{reminder.Priority_color}',
+                Category       = '{reminder.Category}',
+                Frequency      = '{reminder.Frequency}',
+                Is_concluded   = '{reminder.Is_concluded}',
+                Concluded_color = '{reminder.Concluded_color}',
+                Concluded_text = '{reminder.Concluded_text}',
+                _Horario       = '{reminder._Horario}'
+                WHERE _Horario = '{reminder_hour}'
+                ";
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
         }
 
         public void remove(Reminder reminder)

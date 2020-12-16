@@ -148,7 +148,7 @@ namespace Melembre_v2
                     reminders_list_view.Items.Insert(getIndex(), reminder);
                     reminders_list_view.Items.RemoveAt( getIndex() );
 
-                    // database.alterDataBase(reminder, reminder._Horario);
+                    database.update(reminder, reminder._Horario);
 
                 }
                 catch

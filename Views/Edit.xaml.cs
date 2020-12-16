@@ -31,6 +31,12 @@ namespace Melembre_v2.Views
 
         Database database = new Database();
 
+        string temp_hour = "";
+        bool temp_is_concluded = false;
+        string temp_Concluded_text = "";
+        string temp_color = "";
+
+
         public Edit(Reminder reminder)
         {
             InitializeComponent();
@@ -52,6 +58,11 @@ namespace Melembre_v2.Views
             hour_select.Text = hour_minut[0];
             minut_select.Text = hour_minut[1];
 
+            this.temp_hour = reminder._Horario;
+            this.temp_is_concluded = reminder.Is_concluded;
+            this.temp_Concluded_text = reminder.Concluded_text;
+            this.temp_color = reminder.Concluded_color;
+
         }
 
         private void save_buttom_Click(object sender, RoutedEventArgs e)
@@ -62,24 +73,21 @@ namespace Melembre_v2.Views
                 return;
             }
 
-            if (database.exists(hour_select.Text + ":" + minut_select.Text))
-            {
-                MessageBox.Show("Ja existe um lembrete definido para esse horario");
-                return;
-            }
-
             is_edit = true;
-
+            //corrigir o modo edit
             reminder.Reminder_text = input_txt.Text;
             reminder.Priority = defalt_text_priority;
             reminder.Priority_color = defalt_color_priority;
             reminder.Category = category_selected.Text;
             reminder.Frequency = frequency_select.Text;
-            reminder.Is_concluded = false;
-            reminder.Concluded_color = "#FEA224";
-            reminder.Concluded_text = "---";
-            reminder._Horario = hour_select.Text + ":" + minut_select.Text;
 
+            reminder.Is_concluded = temp_is_concluded;
+            reminder.Concluded_color = temp_color;
+            reminder.Concluded_text = temp_Concluded_text;
+
+            reminder._Horario = hour_select.Text + ":" + minut_select.Text;
+ 
+            database.update(reminder, temp_hour);
            
             this.Close();
         }

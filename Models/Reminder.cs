@@ -8,6 +8,7 @@ namespace Melembre.Source.Model
 {
     public class Reminder
     {
+        
         public string Reminder_text   { get; set; }
         public string Priority        { get; set; }
         public string Priority_color  { get; set; }
