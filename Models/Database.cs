@@ -48,7 +48,7 @@ namespace Melembre_v2.Models
 
         }
 
-        public async void save(Reminder reminder)
+        public void save(Reminder reminder)
         {
             connection = new SqliteConnection(aplication_root_directory);
 
@@ -74,7 +74,7 @@ namespace Melembre_v2.Models
                 command.Connection = connection;
 
                
-                await command.ExecuteNonQueryAsync();
+                command.ExecuteNonQuery();
                
 
                 connection.Close();

@@ -114,7 +114,6 @@ namespace Melembre_v2
                 Directory.CreateDirectory(aplication_root_directory);
                 File.Create(aplication_root_directory + "\\init.ini");
                 database.config();
-                reminders = null;
             }
             else
             {
