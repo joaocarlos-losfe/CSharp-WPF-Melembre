@@ -24,6 +24,7 @@ namespace Melembre_v2
 {
     /// <summary>
     /// Interação lógica para MainWindow.xam
+    /// Funcionalidade principais inseridas
     /// </summary>
     public partial class MainWindow : Window
     {
