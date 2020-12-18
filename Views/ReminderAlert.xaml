@@ -1,0 +1,47 @@
+﻿<Window x:Class="Melembre_v2.Views.ReminderAlert"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Melembre_v2.Views"
+        mc:Ignorable="d"
+        Title="Lembrando você" Height="630" Width="874" ResizeMode="NoResize" ShowInTaskbar="True" WindowStartupLocation="CenterScreen" WindowStyle="None" BorderBrush="Gainsboro" Loaded="Window_Loaded" >
+    <Border Padding="60,30,60,30">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="39*"/>
+                <RowDefinition Height="24*"/>
+                <RowDefinition Height="24*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" x:Name="date_time_app" FontSize="25" FontWeight="SemiBold" Foreground="#8182A1" Text="lembrete" Margin="326,0" />
+
+            <StackPanel Grid.Row="1">
+                <TextBlock  x:Name="display_reminder" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Justify" FontSize="45" FontWeight="Bold" Foreground="#514F56" Text="Finalizar o trabalho de Engenharia II ate dia 23"/>
+                <StackPanel Margin="0,30,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <CheckBox HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="1" BorderBrush="#8182A1">
+                        <CheckBox.LayoutTransform>
+                            <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                        </CheckBox.LayoutTransform>
+                    </CheckBox>
+                    <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" FontSize="20" Foreground="#9A9A9A" FontWeight="SemiBold" Text="Marcar como concluido"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2">
+                <Rectangle x:Name="reminder_color_priority"  Width="60" Height="60" Fill="#FF4841" RadiusX="100" RadiusY="100"/>
+                <TextBlock x:Name="reminder_text_priority" HorizontalAlignment="Center" FontSize="40" FontWeight="SemiBold" Foreground="#514F56" Text="Alta prioridade" />
+                <Button  Margin="0,10,0,0" x:Name="mute_btn" Click="mute_btn_Click" HorizontalAlignment="Center" FontSize="20" FontFamily="Segoe MDL2 Assets" Background="Transparent" BorderBrush="Transparent" Content="&#xE74F;"/>
+            </StackPanel>
+            <Button  Grid.Row="3" x:Name="stop_button" Click="stop_button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Background="Transparent" BorderBrush="Transparent" Foreground="#6A686D" Content="Parar" Margin="342,0" Width="70"/>
+
+        </Grid>
+
+
+
+
+
+    </Border>
+</Window>

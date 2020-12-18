@@ -27,10 +27,10 @@ C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.exe
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.pdb
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Home.g.cs
-C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Reminder Alert.g.cs
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Home.baml
-C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Reminder Alert.baml
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Add.g.cs
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Add.baml
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Edit.g.cs
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Edit.baml
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\ReminderAlert.g.cs
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\ReminderAlert.baml

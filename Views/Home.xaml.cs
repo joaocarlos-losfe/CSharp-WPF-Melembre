@@ -2,23 +2,19 @@
 using Melembre.Source.Services;
 using Melembre_v2.Models;
 using Melembre_v2.Views;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
+using System.Threading;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
+using System.Windows.Forms;
+
 using System.Windows.Threading;
+
 
 namespace Melembre_v2
 {
@@ -29,13 +25,19 @@ namespace Melembre_v2
     public partial class MainWindow : Window
     {
         public List<Reminder> reminders = new List<Reminder>();
+        List<string> timers = new List<string>(); // carregar depois do app
+
         Database database = new Database();
-        
+       
+
+        NotifyIcon notifyIcon = new NotifyIcon();
 
         public MainWindow()
         {
             InitializeComponent();
             initSystemApp();
+
+            this.notifyIcon.Click += new EventHandler(notifyIcon_Click);
         }
 
         private void add_btn_Click(object sender, RoutedEventArgs e)
@@ -47,7 +49,9 @@ namespace Melembre_v2
             {
                 reminders_list_view.Items.Add(add.reminder);
                 reminders.Add(add.reminder);
+                timers.Add(add.reminder._Horario + ":00");
                 //o save no database esta direto na classe "Add";
+                ActivateSystemNotification.ReminderAdd(add.reminder);
             }
 
         }
@@ -109,9 +113,12 @@ namespace Melembre_v2
         private void initSystemApp()
         {
             string aplication_root_directory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MelembreApp";
+            
 
             if (!Directory.Exists(aplication_root_directory))
             {
+                
+
                 Directory.CreateDirectory(aplication_root_directory);
                 File.Create(aplication_root_directory + "\\init.ini");
                 database.config();
@@ -125,9 +132,13 @@ namespace Melembre_v2
                     foreach (var reminder in reminders)
                     {
                         reminders_list_view.Items.Add(reminder);
+                        timers.Add(reminder._Horario + ":00");
                     }
                 }
             }
+
+
+
         }
 
         private void conclude_button_Click(object sender, RoutedEventArgs e)
@@ -150,7 +161,6 @@ namespace Melembre_v2
                     reminders_list_view.Items.RemoveAt( getIndex() );
 
                     database.update(reminder, reminder._Horario);
-
                 }
                 catch
                 {
@@ -180,7 +190,43 @@ namespace Melembre_v2
         private void updateTime_tick(object sender, EventArgs e)
         {
             date_time_app.Text = DateTime.Now.ToString("F");
+
+            if(timers.Contains(DateTime.Now.ToString("T")))
+            {
+                int index = timers.IndexOf(DateTime.Now.ToString("T"));
+                ReminderAlert reminderAlert = new ReminderAlert(reminders[index]);
+                reminderAlert.Show();
+            }
+               
         }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            
+            e.Cancel = true;
+
+            var icon = System.Windows.Application.Current.MainWindow.Icon;
+
+            notifyIcon.Icon = System.Drawing.Icon.ExtractAssociatedIcon(System.Windows.Forms.Application.ExecutablePath);
+
+            notifyIcon.Visible = true;
+            notifyIcon.Text = "Melembre";
+
+            ActivateSystemNotification.appClosing();
+
+            this.Visibility = Visibility.Hidden;
+            
+        }
+
+        private void notifyIcon_Click(object sender, EventArgs e)
+        {
+            this.Visibility = Visibility.Visible;
+            
+        }
+
+        private void WindowShow(object sender, EventArgs e)
+        {
+            this.Visibility = Visibility.Visible;
+        }
     }
 }
