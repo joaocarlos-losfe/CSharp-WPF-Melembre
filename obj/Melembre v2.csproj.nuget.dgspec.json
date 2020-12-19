@@ -38,6 +38,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "FluentWPF": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
             "Microsoft.Data.Sqlite": {
               "target": "Package",
               "version": "[5.0.1, )"

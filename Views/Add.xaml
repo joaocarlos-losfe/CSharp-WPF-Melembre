@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Melembre_v2"
         mc:Ignorable="d"
-        Title="Adicionar lembrete" Height="630" Width="874" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" Background="White">
-    <Border Padding="30">
+      
+        Title="Adicionar lembrete" Height="630" Width="874" WindowStartupLocation="CenterScreen" Background="White" ResizeMode="NoResize" WindowStyle="SingleBorderWindow">
+    <Border Padding="30" >
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -48,21 +49,21 @@
                     </Grid>
 
                     <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                        <Button x:Name="high_btn" Click="high_btn_Click" Padding="5"  Background="Transparent" BorderBrush="Transparent"  >
+                        <Button x:Name="high_btn" Click="high_btn_Click" Padding="5" BorderThickness="0" Background="Transparent" BorderBrush="Transparent"  >
                             <StackPanel Orientation="Vertical">
                                 <Rectangle  Width="30" Height="30" RadiusX="100" RadiusY="100" Fill="#FF4841" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                                 <TextBlock FontSize="18" FontWeight="SemiBold" Foreground="#514F56" Text="Alta" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                             </StackPanel>
                         </Button>
 
-                        <Button x:Name="average_button" Click="average_button_Click" Margin="50,0,0,0" Padding="5" Background="Transparent" BorderBrush="Transparent"  >
+                        <Button x:Name="average_button" Click="average_button_Click" Margin="50,0,0,0" Padding="5" BorderThickness="0" Background="Transparent" BorderBrush="Transparent"  >
                             <StackPanel Orientation="Vertical">
                                 <Rectangle  Width="30" Height="30" RadiusX="100" RadiusY="100" Fill="#FBB452" VerticalAlignment="Top" HorizontalAlignment="Center" />
                                 <TextBlock FontSize="18" FontWeight="SemiBold" Foreground="#514F56" Text="Média" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                             </StackPanel>
                         </Button>
 
-                        <Button x:Name="low_button" Click="low_button_Click" Margin="50,0,0,0" Padding="5" Background="Transparent" BorderBrush="Transparent"  >
+                        <Button x:Name="low_button" Click="low_button_Click" Margin="50,0,0,0" Padding="5" BorderThickness="0" Background="Transparent" BorderBrush="Transparent"  >
                             <StackPanel Orientation="Vertical">
                                 <Rectangle  Width="30" Height="30" RadiusX="100" RadiusY="100" Fill="#99EFD5" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                                 <TextBlock FontSize="18" FontWeight="SemiBold" Foreground="#514F56" Text="Baixa" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
@@ -129,7 +130,7 @@
                     </Grid>
                 </StackPanel>
             </Grid>
-            <Button x:Name="save_buttom" Click="save_buttom_Click" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Background="Transparent" BorderBrush="Transparent" FontWeight="Bold" Foreground="#6A686D" Content="Salvar"/>
+            <Button x:Name="save_buttom" Click="save_buttom_Click" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Padding="10" FontWeight="Bold" Foreground="#6A686D" Content="Salvar"/>
         </Grid>
     </Border>
 </Window>

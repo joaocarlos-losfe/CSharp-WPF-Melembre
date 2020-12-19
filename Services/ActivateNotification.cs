@@ -17,7 +17,7 @@ namespace Melembre.Source.Services
             $@"<toast><visual>
             <binding template='ToastGeneric'>
             <text>Novo lembrete Definido</text>
-            <text>{reminder.Reminder_text} {reminder._Horario} Prioridade {reminder.Priority}</text>
+            <text>{reminder.Reminder_text} para as {reminder._Horario} Prioridade {reminder.Priority}</text>
             </binding>
             </visual></toast>";
             var xmlDoc = new Windows.Data.Xml.Dom.XmlDocument();
@@ -57,7 +57,7 @@ namespace Melembre.Source.Services
             $@"<toast><visual>
             <binding template='ToastGeneric'>
             <text>{reminder.Reminder_text}</text>
-            <text>Prioridade{reminder.Priority}</text>
+            <text>Prioridade {reminder.Priority}</text>
             </binding>
             </visual></toast>";
             var xmlDoc = new Windows.Data.Xml.Dom.XmlDocument();

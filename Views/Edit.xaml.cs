@@ -32,6 +32,7 @@ namespace Melembre_v2.Views
         Database database = new Database();
 
         string temp_hour = "";
+
         bool temp_is_concluded = false;
         string temp_Concluded_text = "";
         string temp_color = "";
@@ -73,22 +74,29 @@ namespace Melembre_v2.Views
                 return;
             }
 
-            is_edit = true;
-            //corrigir o modo edit
-            reminder.Reminder_text = input_txt.Text;
-            reminder.Priority = defalt_text_priority;
-            reminder.Priority_color = defalt_color_priority;
-            reminder.Category = category_selected.Text;
-            reminder.Frequency = frequency_select.Text;
+            if(database.exists(hour_select.Text + ":" + minut_select.Text) && hour_select.Text + ":" + minut_select.Text != temp_hour)
+            {
+                MessageBox.Show("Ja existe um lembrete definido para esse hora");
+                return;
+            }
+            else
+            {
+                is_edit = true;
+                //corrigir o modo edit
+                reminder.Reminder_text = input_txt.Text;
+                reminder.Priority = defalt_text_priority;
+                reminder.Priority_color = defalt_color_priority;
+                reminder.Category = category_selected.Text;
+                reminder.Frequency = frequency_select.Text;
 
-            reminder.Is_concluded = temp_is_concluded;
-            reminder.Concluded_color = temp_color;
-            reminder.Concluded_text = temp_Concluded_text;
+                reminder.Is_concluded = temp_is_concluded;
+                reminder.Concluded_color = temp_color;
+                reminder.Concluded_text = temp_Concluded_text;
 
-            reminder._Horario = hour_select.Text + ":" + minut_select.Text;
- 
-            database.update(reminder, temp_hour);
-           
+                reminder._Horario = hour_select.Text + ":" + minut_select.Text;
+                database.update(reminder, temp_hour);
+            }
+
             this.Close();
         }
 

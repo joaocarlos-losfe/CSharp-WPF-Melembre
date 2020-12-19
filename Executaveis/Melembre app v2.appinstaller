@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
 	Uri="file:///C:/Users/joaoc/Documents/melembre alpha/Melembre app v2.appinstaller"
-	Version="0.3.2.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
+	Version="1.0.2.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
 	<MainBundle
 		Name="2ff99da4-efa1-41bc-b07b-c7cf74e7fbe5"
-		Version="0.3.2.0"
-		Publisher="CN=joaoc"
-		Uri="file:///C:/Users/joaoc/Documents/melembre alpha/Melembre app v2_0.3.2.0_Debug_Test/Melembre app v2_0.3.2.0_x86_x64_Debug.msixbundle" />
+		Version="1.0.2.0"
+		Publisher="CN=João Carlos"
+		Uri="file:///C:/Users/joaoc/Documents/melembre alpha/Melembre app v2_1.0.2.0_Debug_Test/Melembre app v2_1.0.2.0_x64_Debug.msixbundle" />
 	<UpdateSettings>
 		<OnLaunch
 			HoursBetweenUpdateChecks="0" />

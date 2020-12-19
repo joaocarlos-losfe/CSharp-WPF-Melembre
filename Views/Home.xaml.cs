@@ -60,24 +60,29 @@ namespace Melembre_v2
         {
             if(getIndex() != -1)
             {
+                int temp_index = getIndex();
                 Edit edit = new Edit(reminders[getIndex()]);
                 edit.ShowDialog();
-                try
+                
+                if (edit.is_edit)
                 {
-                    if (edit.is_edit)
-                    {
-                        reminders.Insert(getIndex(), edit.reminder);
-                        reminders.RemoveAt(getIndex());
+                    reminders.Insert(getIndex(), edit.reminder);
+                    reminders.RemoveAt(getIndex());
 
-                        reminders_list_view.Items.Insert(getIndex(), edit.reminder);
-                        reminders_list_view.Items.RemoveAt(getIndex());
-                    } 
-                }     
-                catch
-                {
+                    reminders_list_view.Items.Insert(getIndex(), edit.reminder);
+                    reminders_list_view.Items.RemoveAt(getIndex());
+
+
+                    Debug.WriteLine(temp_index);
+
+                    timers.Insert(temp_index, edit.reminder._Horario + ":00");
+                    timers.RemoveAt(temp_index + 1);
                     
-                    return;
-                }
+                } 
+            }
+            else
+            {
+                return;
             }
         }
 
@@ -86,23 +91,16 @@ namespace Melembre_v2
             return reminders_list_view.SelectedIndex;
         }
 
-
         private void delete_button_Click(object sender, RoutedEventArgs e)
         {
             if (getIndex() != -1)
             {
-                try
-                {
-                    database.remove(reminders[getIndex()]);
-                    reminders.RemoveAt(getIndex());
-                    reminders_list_view.Items.RemoveAt(getIndex());
-                    reminders_list_view.Items.Refresh();
-                }
-                catch
-                {
-                    reminders_list_view.Items.Refresh();
-                    return;
-                }
+             
+                database.remove(reminders[getIndex()]);
+                reminders.RemoveAt(getIndex());
+                reminders_list_view.Items.RemoveAt(getIndex());
+
+                reminders_list_view.Items.Refresh();    
             }
             else
             {
@@ -113,12 +111,9 @@ namespace Melembre_v2
         private void initSystemApp()
         {
             string aplication_root_directory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MelembreApp";
-            
-
+           
             if (!Directory.Exists(aplication_root_directory))
             {
-                
-
                 Directory.CreateDirectory(aplication_root_directory);
                 File.Create(aplication_root_directory + "\\init.ini");
                 database.config();
@@ -136,41 +131,34 @@ namespace Melembre_v2
                     }
                 }
             }
-
-
-
         }
 
         private void conclude_button_Click(object sender, RoutedEventArgs e)
         {
             Reminder reminder = new Reminder();
+
             if (getIndex() != -1)
             {
-                try
-                {
-                    Debug.WriteLine(getIndex());
-                    reminder = reminders[getIndex()];
-                    reminder.Concluded_color = "#49BABA";
-                    reminder.Concluded_text = "✔";
-                    reminder.Is_concluded = true;
+                
+                Debug.WriteLine(getIndex());
+                reminder = reminders[getIndex()];
+                reminder.Concluded_color = "#49BABA";
+                reminder.Concluded_text = "✔";
+                reminder.Is_concluded = true;
 
-                    reminders.Insert(getIndex(), reminder);
-                    reminders.RemoveAt(getIndex());
+                reminders.Insert(getIndex(), reminder);
+                reminders.RemoveAt(getIndex());
                
-                    reminders_list_view.Items.Insert(getIndex(), reminder);
-                    reminders_list_view.Items.RemoveAt( getIndex() );
+                reminders_list_view.Items.Insert(getIndex(), reminder);
+                reminders_list_view.Items.RemoveAt( getIndex() );
 
-                    database.update(reminder, reminder._Horario);
-                }
-                catch
-                {
-                    return;
-                }
+                database.update(reminder, reminder._Horario);
             }
             else
             {
                 return;
             }
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -202,31 +190,20 @@ namespace Melembre_v2
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            
             e.Cancel = true;
-
             var icon = System.Windows.Application.Current.MainWindow.Icon;
-
             notifyIcon.Icon = System.Drawing.Icon.ExtractAssociatedIcon(System.Windows.Forms.Application.ExecutablePath);
-
             notifyIcon.Visible = true;
             notifyIcon.Text = "Melembre";
-
-            ActivateSystemNotification.appClosing();
-
-            this.Visibility = Visibility.Hidden;
-            
+            notifyIcon.BalloonTipText = "O Melembre esta sendo executado em segundo plano";
+            notifyIcon.ShowBalloonTip(500);
+            this.Visibility = Visibility.Hidden; 
         }
 
         private void notifyIcon_Click(object sender, EventArgs e)
         {
-            this.Visibility = Visibility.Visible;
-            
+            this.Visibility = Visibility.Visible;  
         }
 
-        private void WindowShow(object sender, EventArgs e)
-        {
-            this.Visibility = Visibility.Visible;
-        }
     }
 }

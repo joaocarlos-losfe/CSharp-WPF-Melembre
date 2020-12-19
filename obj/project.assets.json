@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "FluentWPF/0.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FluentWPF.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentWPF.dll": {}
+        }
+      },
       "Microsoft.Data.Sqlite/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -306,6 +315,15 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
+      "FluentWPF/0.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FluentWPF.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentWPF.dll": {}
+        }
+      },
       "Microsoft.Data.Sqlite/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -556,6 +574,15 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
+      "FluentWPF/0.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FluentWPF.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentWPF.dll": {}
+        }
+      },
       "Microsoft.Data.Sqlite/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -809,6 +836,15 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
+      "FluentWPF/0.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FluentWPF.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentWPF.dll": {}
+        }
+      },
       "Microsoft.Data.Sqlite/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -1063,6 +1099,20 @@
     }
   },
   "libraries": {
+    "FluentWPF/0.8.0": {
+      "sha512": "Yq/GjRtlNRjE5lLf99NWqJ+9kSeuhSrt55/Is1wgZwSL6s2oZWxfT1C6bnz7O+kzb/aAWEZD94X0MP5mW4H+qQ==",
+      "type": "package",
+      "path": "fluentwpf/0.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "fluentwpf.0.8.0.nupkg.sha512",
+        "fluentwpf.nuspec",
+        "lib/net45/FluentWPF.dll",
+        "lib/netcoreapp3.0/FluentWPF.dll"
+      ]
+    },
     "Microsoft.Data.Sqlite/5.0.1": {
       "sha512": "rG5x65qk01rtB+OH+i07rcl4KVHGMPCJDFohUYIn59MFgfqRdDDePXtC4MDyR7E/6FOX9Rk5HpK3eU4d8S3GEQ==",
       "type": "package",
@@ -1606,6 +1656,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "FluentWPF >= 0.8.0",
       "Microsoft.Data.Sqlite >= 5.0.1",
       "Microsoft.Windows.SDK.Contracts >= 10.0.19041.1"
     ]
@@ -1648,6 +1699,10 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "FluentWPF": {
+            "target": "Package",
+            "version": "[0.8.0, )"
+          },
           "Microsoft.Data.Sqlite": {
             "target": "Package",
             "version": "[5.0.1, )"

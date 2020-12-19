@@ -34,3 +34,5 @@ C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Edit.baml
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\ReminderAlert.g.cs
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\ReminderAlert.baml
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\FluentWPF.dll
+C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\App.baml

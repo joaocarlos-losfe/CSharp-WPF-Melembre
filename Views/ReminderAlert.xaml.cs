@@ -57,7 +57,7 @@ namespace Melembre_v2.Views
             date_time_app.Text = DateTime.Now.ToString("F");
             time_tick++;
 
-            if(time_tick == 58)
+            if(time_tick == 40)
             {
                 ExecuteSound.stop_sound();
                 this.Close();
@@ -75,6 +75,9 @@ namespace Melembre_v2.Views
             this.Close();
         }
 
-       
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            ExecuteSound.stop_sound();
+        }
     }
 }
