@@ -28,9 +28,11 @@ namespace Melembre_v2
         List<string> timers = new List<string>(); // carregar depois do app
 
         Database database = new Database();
-       
+        string aplication_root_directory = "";
 
         NotifyIcon notifyIcon = new NotifyIcon();
+
+        string current_process_id = "";
 
         public MainWindow()
         {
@@ -95,11 +97,12 @@ namespace Melembre_v2
         {
             if (getIndex() != -1)
             {
-             
+                int temp_index = getIndex();
                 database.remove(reminders[getIndex()]);
                 reminders.RemoveAt(getIndex());
                 reminders_list_view.Items.RemoveAt(getIndex());
 
+                timers.RemoveAt(temp_index);
                 reminders_list_view.Items.Refresh();    
             }
             else
@@ -110,12 +113,14 @@ namespace Melembre_v2
 
         private void initSystemApp()
         {
-            string aplication_root_directory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MelembreApp";
+            aplication_root_directory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MelembreApp";
            
             if (!Directory.Exists(aplication_root_directory))
             {
                 Directory.CreateDirectory(aplication_root_directory);
-                File.Create(aplication_root_directory + "\\init.ini");
+
+                using(File.Create(aplication_root_directory + "\\process.dat")){}
+
                 database.config();
             }
             else
@@ -131,6 +136,27 @@ namespace Melembre_v2
                     }
                 }
             }
+
+            string process = File.ReadAllText(aplication_root_directory + "\\process.dat");
+            Debug.WriteLine(process);
+
+
+            // adcionar > recuperar todos os processos associados e eliminalo, exeto o atual.
+            //https://docs.microsoft.com/pt-br/dotnet/api/system.diagnostics.process.getprocessesbyname?view=net-5.0
+
+            if (process != null || process != "")
+            {
+                try
+                {
+                    Process process_kill = Process.GetProcessById(int.Parse(process));
+                    process_kill.Kill();
+                }
+                catch
+                {
+                    //ok
+                } 
+            }
+
         }
 
         private void conclude_button_Click(object sender, RoutedEventArgs e)
@@ -139,7 +165,6 @@ namespace Melembre_v2
 
             if (getIndex() != -1)
             {
-                
                 Debug.WriteLine(getIndex());
                 reminder = reminders[getIndex()];
                 reminder.Concluded_color = "#49BABA";
@@ -183,23 +208,23 @@ namespace Melembre_v2
             {
                 int index = timers.IndexOf(DateTime.Now.ToString("T"));
                 ReminderAlert reminderAlert = new ReminderAlert(reminders[index]);
-                reminderAlert.Show();
+                reminderAlert.ShowDialog();
+                this.Visibility = Visibility.Visible;
+                reminders_list_view.SelectedItem = reminders[index];
             }
                
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            
             e.Cancel = true;
-            var icon = System.Windows.Application.Current.MainWindow.Icon;
-            notifyIcon.Icon = System.Drawing.Icon.ExtractAssociatedIcon(System.Windows.Forms.Application.ExecutablePath);
-            notifyIcon.Visible = true;
-            notifyIcon.Text = "Melembre";
-            notifyIcon.BalloonTipText = "O Melembre esta sendo executado em segundo plano";
-            notifyIcon.ShowBalloonTip(500);
+            current_process_id = Process.GetCurrentProcess().Id.ToString();
+            File.WriteAllText(aplication_root_directory + "\\process.dat", current_process_id);
             this.Visibility = Visibility.Hidden; 
         }
 
+        
         private void notifyIcon_Click(object sender, EventArgs e)
         {
             this.Visibility = Visibility.Visible;  

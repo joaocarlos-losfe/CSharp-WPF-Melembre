@@ -101,7 +101,7 @@ namespace Melembre_v2 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Melembre v2;component/views/home.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Melembre;component/views/home.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Views\Home.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

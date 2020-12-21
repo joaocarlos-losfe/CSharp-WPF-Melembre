@@ -100,7 +100,7 @@ namespace Melembre_v2.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Melembre v2;component/views/reminderalert.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Melembre;component/views/reminderalert.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Views\ReminderAlert.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
