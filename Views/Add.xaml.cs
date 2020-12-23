@@ -49,6 +49,7 @@ namespace Melembre_v2
             reminder.Is_concluded = false;
             reminder.Concluded_color = "#FEA224";
             reminder.Concluded_text = "---";
+            reminder.Is_already_alarmed = false;
             reminder._Horario = hour_select.Text + ":" + minut_select.Text;
 
             database.save(reminder);

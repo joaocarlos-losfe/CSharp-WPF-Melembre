@@ -142,7 +142,6 @@ namespace Melembre_v2
 
 
             // adcionar > recuperar todos os processos associados e eliminalo, exeto o atual.
-            //https://docs.microsoft.com/pt-br/dotnet/api/system.diagnostics.process.getprocessesbyname?view=net-5.0
 
             if (process != null || process != "")
             {
@@ -154,10 +153,34 @@ namespace Melembre_v2
                 catch
                 {
                     //ok
-                } 
+                }
             }
 
+            // getAssosiatesProcess();
+
         }
+
+        //private void getAssosiatesProcess()
+        //{
+        //    Process[] localByName = Process.GetProcessesByName("Melembre");
+
+        //    if(localByName != null )
+        //    {
+
+        //        if(localByName.Length > 1)
+        //        {
+        //            foreach (var pr in localByName)
+        //            {
+        //                if(Process.GetCurrentProcess().ToString() != pr.Id.ToString())
+        //                {
+        //                    Process process_kill = Process.GetProcessById(int.Parse(pr.Id.ToString()));
+        //                    process_kill.Kill();
+
+        //                }
+        //            }
+        //        }
+        //    }   
+        //}
 
         private void conclude_button_Click(object sender, RoutedEventArgs e)
         {
@@ -207,10 +230,34 @@ namespace Melembre_v2
             if(timers.Contains(DateTime.Now.ToString("T")))
             {
                 int index = timers.IndexOf(DateTime.Now.ToString("T"));
-                ReminderAlert reminderAlert = new ReminderAlert(reminders[index]);
-                reminderAlert.ShowDialog();
-                this.Visibility = Visibility.Visible;
-                reminders_list_view.SelectedItem = reminders[index];
+                string temp_frequency = "";
+                temp_frequency = reminders[index].Frequency;
+
+                Debug.WriteLine("era pra alarmar");
+                Debug.WriteLine(reminders[index].Is_already_alarmed + " " + reminders[index].Frequency);
+
+
+                if ( (reminders[index].Frequency == "Uma vez" && !(reminders[index].Is_already_alarmed)) || reminders[index].Frequency == "Todo dia")
+                {
+                    ReminderAlert reminderAlert = new ReminderAlert(reminders[index]);
+                    reminderAlert.ShowDialog();
+
+                    this.Visibility = Visibility.Visible;
+                    Reminder reminder = new Reminder();
+
+                    reminder = reminders[index];
+                    reminder.Is_already_alarmed = true;
+
+                    database.update(reminder, reminder._Horario);
+
+                    reminders.RemoveAt(index);
+                    reminders.Insert(index, reminder);
+                    
+
+                    reminders_list_view.SelectedItem = reminders[index];
+                }
+
+                
             }
                
         }

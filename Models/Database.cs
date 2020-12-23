@@ -35,7 +35,9 @@ namespace Melembre_v2.Models
                     Is_concluded VARCHAR NOT NULL,
                     Concluded_color VARCHAR NOT NULL,
                     Concluded_text VARCHAR NOT NULL,
+                    Is_already_alarmed varchar NOT NULL,
                     _Horario VARCHAR NOT NULL PRiMARY KEY
+                    
                 )";
 
                 command.Connection = connection;
@@ -55,7 +57,7 @@ namespace Melembre_v2.Models
             {
                 connection.Open();
 
-                command.CommandText = $@"INSERT INTO Reminders (Reminder_text, Priority, Priority_color, Category, Frequency, Is_concluded, Concluded_color, Concluded_text, _Horario )
+                command.CommandText = $@"INSERT INTO Reminders (Reminder_text, Priority, Priority_color, Category, Frequency, Is_concluded, Concluded_color, Concluded_text, Is_already_alarmed, _Horario )
                 VALUES
                 (
                     '{reminder.Reminder_text}',
@@ -66,6 +68,7 @@ namespace Melembre_v2.Models
                     '{reminder.Is_concluded.ToString()}',
                     '{reminder.Concluded_color}',
                     '{reminder.Concluded_text}',
+                    '{reminder.Is_already_alarmed.ToString()}',
                     '{reminder._Horario}'
                     
                 )";
@@ -107,6 +110,7 @@ namespace Melembre_v2.Models
                     reminder.Is_concluded = bool.Parse(dataReader["Is_concluded"].ToString());
                     reminder.Concluded_color = dataReader["Concluded_color"].ToString();
                     reminder.Concluded_text = dataReader["Concluded_text"].ToString();
+                    reminder.Is_already_alarmed = bool.Parse(dataReader["Is_already_alarmed"].ToString());
                     reminder._Horario = dataReader["_Horario"].ToString();
 
                     if (reminder != null)
@@ -139,6 +143,7 @@ namespace Melembre_v2.Models
                 Is_concluded   = '{reminder.Is_concluded}',
                 Concluded_color = '{reminder.Concluded_color}',
                 Concluded_text = '{reminder.Concluded_text}',
+                Is_already_alarmed = '{reminder.Is_already_alarmed}',
                 _Horario       = '{reminder._Horario}'
                 WHERE _Horario = '{reminder_hour}'
                 ";
