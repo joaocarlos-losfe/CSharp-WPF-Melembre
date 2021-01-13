@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj": {}
+    "C:\\Users\\joaoc\\Desktop\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj": {
+    "C:\\Users\\joaoc\\Desktop\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj",
+        "projectUniqueName": "C:\\Users\\joaoc\\Desktop\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj",
         "projectName": "Melembre v2",
-        "projectPath": "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj",
+        "projectPath": "C:\\Users\\joaoc\\Desktop\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj",
         "packagesPath": "C:\\Users\\joaoc\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\obj\\",
+        "outputPath": "C:\\Users\\joaoc\\Desktop\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

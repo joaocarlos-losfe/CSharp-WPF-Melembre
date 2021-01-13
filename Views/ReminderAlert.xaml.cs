@@ -35,6 +35,7 @@ namespace Melembre_v2.Views
             reminder_color_priority.Fill = ColorStringConverter.stringToColor(reminder.Priority_color);
             reminder_text_priority.Text = "Prioridade " + reminder.Priority;
             ExecuteSound.play_sound(@"C:\Windows\Media\Ring10.wav");
+
             ActivateSystemNotification.remembering(reminder);
         }
 

@@ -1,6 +1,9 @@
 ﻿using Melembre.Source.Model;
 using Melembre.Source.Services;
 using Melembre_v2.Models;
+using Melembre_v2.Views.Dialogs;
+using System;
+using System.Diagnostics;
 using System.Windows;
 
 namespace Melembre_v2
@@ -10,7 +13,7 @@ namespace Melembre_v2
     /// </summary>
     public partial class AddEdit : Window
     {
-
+        string selectedCategory = null;
         string defalt_color_priority = "#FF4841";
         string defalt_text_priority = "Alta";
 
@@ -29,7 +32,9 @@ namespace Melembre_v2
         
         private void save_buttom_Click(object sender, RoutedEventArgs e)
         {
-            if(input_txt.Text == null || StringChecks.stringIsSpaces(input_txt.Text) == true)
+            
+
+            if (input_txt.Text == null || StringChecks.stringIsSpaces(input_txt.Text) == true)
             {
                 MessageBox.Show("O lembrete esta vazio !!");
                 return;
@@ -44,6 +49,9 @@ namespace Melembre_v2
             reminder.Reminder_text = input_txt.Text;
             reminder.Priority = defalt_text_priority;
             reminder.Priority_color = defalt_color_priority;
+
+           
+
             reminder.Category = category_selected.Text;
             reminder.Frequency = frequency_select.Text;
             reminder.Is_concluded = false;
@@ -103,6 +111,44 @@ namespace Melembre_v2
         public Reminder getReminder()
         {
             return reminder;
+        }
+
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NewCategory newCategory = new NewCategory();
+
+            newCategory.Title = "Nova categoria";
+
+            newCategory.ShowDialog();
+
+            if(newCategory.newCategoryTxt != null)
+            {
+                selectedCategory = newCategory.newCategoryTxt;
+                category_selected.Items.Add(selectedCategory);
+                category_selected.Text = selectedCategory;
+            }
+            
+        }
+
+        private void SelectDaysBtn_Click(object sender, RoutedEventArgs e)
+        {
+            SelectDays.Visibility = Visibility.Visible;
+        }
+
+        private void saveDaysBtn_Click(object sender, RoutedEventArgs e)
+        {
+            SelectDays.Visibility = Visibility.Collapsed;
+
+            string data = "seg; ter; qua;";
+
+            frequency_select.Items.Insert(2, data);
+            frequency_select.SelectedItem = data;
+        }
+
+        private void frequency_select_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }

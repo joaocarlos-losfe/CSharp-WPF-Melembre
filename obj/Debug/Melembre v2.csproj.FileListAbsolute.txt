@@ -36,3 +36,43 @@ C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre.g.resources
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre.exe
 C:\Projetos\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre.pdb
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\Melembre.exe.config
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\Melembre.exe
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\Melembre.pdb
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\FluentWPF.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\Microsoft.Data.Sqlite.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\SQLitePCLRaw.nativelibrary.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Buffers.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Memory.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.csprojAssemblyReference.cache
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre.exe.config
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Add.g.cs
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Edit.g.cs
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Home.g.cs
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\ReminderAlert.g.cs
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\App.g.cs
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre_Content.g.cs
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre_MarkupCompile.cache
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre_MarkupCompile.lref
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\App.baml
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Add.baml
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Edit.baml
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Home.baml
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\ReminderAlert.baml
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre.g.resources
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre_v2.Properties.Resources.resources
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.csproj.GenerateResource.cache
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.csproj.CoreCompileInputs.cache
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.csproj.CopyComplete
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre.exe
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre.pdb
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Dialogs\NewCategory.g.cs
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Dialogs\NewCategory.baml

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7QT5tUd28HslphYQxhqwvzzwxjAEW7xLUP4/t9m72bt3/MgQxS6qfzigcsv2Gj918bmgyswlsF7QerlF5vZf+w==",
+  "dgSpecHash": "5Zk4TBEdVcxnGVDUVKkqCexLNGEhmRvsH/owF4xo+uN+poDskF/0rXlxWoBsgTxH4L1chNkS9SM5nKrct4TdmA==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj",
+  "projectFilePath": "C:\\Users\\joaoc\\Desktop\\UFPI\\Engenharia II\\Engenharia Projeto\\Projeto principal\\Melembre v2\\Melembre v2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joaoc\\.nuget\\packages\\fluentwpf\\0.8.0\\fluentwpf.0.8.0.nupkg.sha512",
     "C:\\Users\\joaoc\\.nuget\\packages\\microsoft.data.sqlite\\5.0.1\\microsoft.data.sqlite.5.0.1.nupkg.sha512",
