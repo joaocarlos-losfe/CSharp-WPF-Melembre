@@ -256,6 +256,37 @@ namespace Melembre_v2
 
                     reminders_list_view.SelectedItem = reminders[index];
                 }
+                else if(reminders[index].Frequency != "Uma vez" || reminders[index].Frequency != "Todo dia")
+                {
+                    Debug.WriteLine("Freqeuncia personalizada");
+                    string[] frequency = reminders[index].Frequency.Split(' ');
+
+                    List<string> days = new List<string>();
+
+                    foreach (var day in frequency)
+                        days.Add(day);
+
+                    string abrevDay = DateTime.Now.ToString("ddd");
+
+                    if(days.Contains(abrevDay))
+                    {
+                        ReminderAlert reminderAlert = new ReminderAlert(reminders[index]);
+                        reminderAlert.ShowDialog();
+
+                        this.Visibility = Visibility.Visible;
+                        Reminder reminder = new Reminder();
+
+                        reminder = reminders[index];
+                        reminder.Is_already_alarmed = true;
+
+                        database.update(reminder, reminder._Horario);
+
+                        reminders.RemoveAt(index);
+                        reminders.Insert(index, reminder);
+
+                        reminders_list_view.SelectedItem = reminders[index];
+                    }
+                }
 
                 
             }
@@ -264,7 +295,6 @@ namespace Melembre_v2
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            
             e.Cancel = true;
             current_process_id = Process.GetCurrentProcess().Id.ToString();
             File.WriteAllText(aplication_root_directory + "\\process.dat", current_process_id);

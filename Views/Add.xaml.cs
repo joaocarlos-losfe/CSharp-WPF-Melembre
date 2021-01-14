@@ -3,6 +3,7 @@ using Melembre.Source.Services;
 using Melembre_v2.Models;
 using Melembre_v2.Views.Dialogs;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows;
 
@@ -16,6 +17,8 @@ namespace Melembre_v2
         string selectedCategory = null;
         string defalt_color_priority = "#FF4841";
         string defalt_text_priority = "Alta";
+
+        
 
         Database database = new Database();
 
@@ -127,28 +130,33 @@ namespace Melembre_v2
                 selectedCategory = newCategory.newCategoryTxt;
                 category_selected.Items.Add(selectedCategory);
                 category_selected.Text = selectedCategory;
-            }
-            
+            } 
         }
 
         private void SelectDaysBtn_Click(object sender, RoutedEventArgs e)
         {
-            SelectDays.Visibility = Visibility.Visible;
-        }
+            string days = null;
 
-        private void saveDaysBtn_Click(object sender, RoutedEventArgs e)
-        {
-            SelectDays.Visibility = Visibility.Collapsed;
+            FrequencyDays frequencyDays = new FrequencyDays();
+            frequencyDays.ShowDialog();
 
-            string data = "seg; ter; qua;";
 
-            frequency_select.Items.Insert(2, data);
-            frequency_select.SelectedItem = data;
-        }
+            if (frequencyDays.MarquedDays == null || frequencyDays.MarquedDays.Count == 0)
+            {
+                frequency_select.Text = "Uma vez";
+            }
+            else
+            {
+                List<string> selected_days = frequencyDays.MarquedDays;
 
-        private void frequency_select_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            
+                foreach (var day in selected_days)
+                    days += day + " ";
+
+                frequency_select.Items.Add(days);
+                frequency_select.Text = days;
+                return;
+            }
+                
         }
     }
 }

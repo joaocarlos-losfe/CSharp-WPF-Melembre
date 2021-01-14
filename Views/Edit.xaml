@@ -90,11 +90,15 @@
                     <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Categoria"/>
                     <ComboBox x:Name="category_selected" Margin="0,14,0,0" Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100" >
                         <ComboBoxItem Content="Social" IsSelected="True"/>
-                        <ComboBoxItem Content="Médicação"/>
+                        <ComboBoxItem Content="Medicação"/>
                         <ComboBoxItem Content="Lazer"/>
                         <ComboBoxItem Content="Financeiro"/>
+                        <ComboBoxItem Content="Consulta"/>
                         <ComboBoxItem Content="Estudos"/>
+                        <ComboBoxItem Content="Médico"/>
                         <ComboBoxItem Content="Contas"/>
+                        <ComboBoxItem Content="Trabalho"/>
+                        <Button x:Name="OutroBtn" Click="OutroBtn_Click" Width="350" Content="Outro..." Background="Transparent" BorderThickness="0" />
                     </ComboBox>
                 </StackPanel>
 
@@ -103,6 +107,8 @@
                     <ComboBox x:Name="frequency_select" Margin="0,14,0,0" Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100" >
                         <ComboBoxItem Content="Uma vez" IsSelected="True" />
                         <ComboBoxItem Content="Todo dia"/>
+                        <Button Width="350" FontSize="16" Content="Definir dias...." x:Name="SelectDaysBtn" Click="SelectDaysBtn_Click" Background="Transparent" BorderThickness="0"/>
+
                     </ComboBox>
                 </StackPanel>
 

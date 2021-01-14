@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Melembre_v2"
         mc:Ignorable="d"
-      
         Title="Adicionar lembrete" Height="630" Width="874" WindowStartupLocation="CenterScreen" Background="White" ResizeMode="NoResize" WindowStyle="SingleBorderWindow">
     <Border Padding="30" >
         <Grid>
@@ -28,11 +27,9 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Margin="5,0,5,0">
-                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Lembrete"/>
-                    <TextBox x:Name="input_txt" TextWrapping="Wrap" MaxLines="3" MaxLength="120" TextAlignment="Justify" Margin="0,14,0,0" FontSize="15" Height="90" Foreground="#9A9A9A" FontWeight="SemiBold" Padding="5" BorderBrush="Transparent">
-                        <TextBox.Effect>
-                            <DropShadowEffect ShadowDepth="1" Opacity="0.3" Color="#FF999999"/>
-                        </TextBox.Effect>
+                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Digite o Lembrete"/>
+                    <TextBox x:Name="input_txt" TextWrapping="Wrap" MaxLines="3" MaxLength="120" TextAlignment="Justify" Margin="0,14,0,0" FontSize="18" Height="90" Foreground="Black" FontWeight="SemiBold" Padding="5" BorderBrush="WhiteSmoke" BorderThickness="2">
+                        
                     </TextBox>
                 </StackPanel>
 
@@ -90,39 +87,24 @@
                     <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Categoria"/>
                     <ComboBox x:Name="category_selected" Margin="0,14,0,0" Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100" >
                         <ComboBoxItem Content="Social" IsSelected="True"/>
-                        <ComboBoxItem Content="Médicação"/>
+                        <ComboBoxItem Content="Medicação"/>
                         <ComboBoxItem Content="Lazer"/>
                         <ComboBoxItem Content="Financeiro"/>
+                        <ComboBoxItem Content="Consulta"/>
                         <ComboBoxItem Content="Estudos"/>
+                        <ComboBoxItem Content="Médico"/>
                         <ComboBoxItem Content="Contas"/>
                         <ComboBoxItem Content="Trabalho"/>
-                        <Button Width="350"  Content="Outro..." Background="Transparent" BorderThickness="0" Click="Button_Click" />
+                        <Button Width="350" Content="Outro..." Background="Transparent" BorderThickness="0" Click="Button_Click" />
                     </ComboBox>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Margin="5,0,5,0">
-                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Frequencia"/>
-                    <ComboBox x:Name="frequency_select" Margin="0,14,0,0" Background="#F9F9F9" SelectionChanged="frequency_select_SelectionChanged" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100" >
+                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Frequência"/>
+                    <ComboBox x:Name="frequency_select" Margin="0,14,0,0" Background="#F9F9F9"  BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100" >
                         <ComboBoxItem Content="Uma vez" IsSelected="True" />
                         <ComboBoxItem Content="Todo dia"/>
                         <Button Width="350" FontSize="16" Content="Definir dias...." x:Name="SelectDaysBtn" Click="SelectDaysBtn_Click" Background="Transparent" BorderThickness="0"/>
-                        <StackPanel x:Name="SelectDays" Margin="0,10,0,0" Visibility="Collapsed">
-                            <StackPanel Margin="0,10" Orientation="Horizontal">
-                                <CheckBox FontSize="14" Content="Segunda" VerticalContentAlignment="Center"/>
-                                <CheckBox Margin="30,0,0,0" FontSize="14" Content="Terça" VerticalContentAlignment="Center"/>
-                                <CheckBox Margin="30,0,0,0" FontSize="14" Content="Quarta" VerticalContentAlignment="Center"/>
-                            </StackPanel>
-
-                            <StackPanel Margin="0,10" Orientation="Horizontal" >
-                                <CheckBox FontSize="14" Content="quinta" VerticalContentAlignment="Center"/>
-                                <CheckBox Margin="45,0,0,0" FontSize="14" Content="Sexta" VerticalContentAlignment="Center"/>
-                                <CheckBox Margin="29,0,0,0" FontSize="14" Content="Sabado" VerticalContentAlignment="Center"/>
-                            </StackPanel>
-                            <CheckBox Margin="0,10" FontSize="14" Content="Domingo" VerticalContentAlignment="Center"/>
-                            <Button Margin="0,10" x:Name="saveDaysBtn" Click="saveDaysBtn_Click" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Padding="10" FontWeight="Bold" Foreground="#6A686D" Content="Salvar"/>
-
-
-                        </StackPanel>
                     </ComboBox>
                 </StackPanel>
 

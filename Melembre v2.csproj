@@ -67,6 +67,9 @@
     <Compile Include="Views\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dialogs\FrequencyDays.xaml.cs">
+      <DependentUpon>FrequencyDays.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dialogs\NewCategory.xaml.cs">
       <DependentUpon>NewCategory.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,10 @@
       <DependentUpon>ReminderAlert.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\FrequencyDays.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

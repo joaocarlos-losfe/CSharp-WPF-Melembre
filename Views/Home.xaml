@@ -88,7 +88,7 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Header="Lembrete" Width="400">
+                        <GridViewColumn Header="Lembrete" Width="360">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Margin="2" FontSize="18" TextAlignment="Justify" FontWeight="Bold" Foreground="#514F56" TextWrapping="Wrap" Text="{Binding Reminder_text}"/>
@@ -120,7 +120,7 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Header="Frequencia" Width="150">
+                        <GridViewColumn Header="Frequencia" Width="200">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Margin="2" FontWeight="SemiBold" FontSize="20" Text="{Binding Frequency}"/>

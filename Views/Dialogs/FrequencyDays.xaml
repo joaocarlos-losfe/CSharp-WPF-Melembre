@@ -1,0 +1,70 @@
+﻿<Window x:Class="Melembre_v2.Views.Dialogs.FrequencyDays"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Melembre_v2.Views.Dialogs"
+        mc:Ignorable="d"
+        Title="Definir uma frequência personalizada" Height="240" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10,5,10,5">
+        <StackPanel>
+            <TextBlock Text="Selecione os dias da semana em que deseja ser lembrado:" FontSize="16" FontWeight="SemiBold" Foreground="#9A9A9A"/>
+            
+            <StackPanel Margin="0,12,0,10" Orientation="Horizontal" >
+                <CheckBox x:Name="Seg" Click="Seg_Click" Content="Segunda-feira"  FontWeight="SemiBold" Foreground="#514F56">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+
+                <CheckBox x:Name="Terc" Click="Terc_Click" Margin="20,0,0,0" Content="Terça-feira"  FontWeight="SemiBold" Foreground="#514F56">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+
+                <CheckBox x:Name="Qua" Click="Qua_Click" Margin="20,0,0,0" Content="Quarta-feira"  FontWeight="SemiBold" Foreground="#514F56">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+
+            </StackPanel>
+
+            <StackPanel Margin="0,10,0,10" Orientation="Horizontal" >
+                <CheckBox x:Name="Qui" Click="Qui_Click" Content="Quinta-feira"  FontWeight="SemiBold" Foreground="#514F56">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+
+                <CheckBox x:Name="Sex" Click="Sex_Click" Margin="34,0,0,0" Content="Sexta-feira"  FontWeight="SemiBold" Foreground="#514F56">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+
+                <CheckBox x:Name="Sab" Click="Sab_Click" Margin="17,0,0,0" Content="Sábado"  FontWeight="SemiBold" Foreground="#514F56">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+
+            </StackPanel>
+
+            <StackPanel Margin="0,10,0,0" Orientation="Horizontal" >
+                <CheckBox x:Name="Dom" Click="Dom_Click" Content="Domingo" FontWeight="SemiBold" Foreground="#514F56">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+
+            </StackPanel>
+
+            <Button x:Name="btn_salvar" Click="btn_salvar_Click" Margin="0,10,0,0" VerticalContentAlignment="Center" FontSize="16" Content="Salvar" Background="Transparent" BorderThickness="0" Padding="8" HorizontalAlignment="Center" FontWeight="SemiBold" Foreground="#6A686D"/>
+
+
+        </StackPanel>
+        
+    </Grid>
+</Window>

@@ -76,3 +76,5 @@ C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\M
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre.pdb
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Dialogs\NewCategory.g.cs
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Dialogs\NewCategory.baml
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Dialogs\FrequencyDays.g.cs
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Dialogs\FrequencyDays.baml

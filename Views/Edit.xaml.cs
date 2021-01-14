@@ -1,6 +1,7 @@
 ﻿using Melembre.Source.Model;
 using Melembre.Source.Services;
 using Melembre_v2.Models;
+using Melembre_v2.Views.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace Melembre_v2.Views
     {
         string defalt_color_priority = "";
         string defalt_text_priority = "";
-
+        string selectedCategory = null;
         public bool is_edit = false;
 
         public Reminder reminder = new Reminder();
@@ -51,7 +52,10 @@ namespace Melembre_v2.Views
             defalt_color_priority = reminder.Priority_color;
             defalt_text_priority = reminder.Priority;
 
+            category_selected.Items.Add(reminder.Category);
             category_selected.Text = reminder.Category;
+
+            frequency_select.Items.Add(reminder.Frequency);
             frequency_select.Text = reminder.Frequency;
 
             string[] hour_minut = reminder._Horario.Split(':');
@@ -139,6 +143,44 @@ namespace Melembre_v2.Views
             minut_select.SelectedIndex = 0;
         }
 
+        private void OutroBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NewCategory newCategory = new NewCategory();
 
+            newCategory.Title = "Nova categoria";
+
+            newCategory.ShowDialog();
+
+            if (newCategory.newCategoryTxt != null)
+            {
+                selectedCategory = newCategory.newCategoryTxt;
+                category_selected.Items.Add(selectedCategory);
+                category_selected.Text = selectedCategory;
+            }
+        }
+
+        private void SelectDaysBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string days = null;
+
+            FrequencyDays frequencyDays = new FrequencyDays();
+            frequencyDays.ShowDialog();
+
+            if (frequencyDays.MarquedDays == null || frequencyDays.MarquedDays.Count == 0)
+            {
+                frequency_select.Text = "Uma vez";
+            }
+            else
+            {
+                List<string> selected_days = frequencyDays.MarquedDays;
+
+                foreach (var day in selected_days)
+                    days += day + " ";
+
+                frequency_select.Items.Add(days);
+                frequency_select.Text = days;
+                return;
+            }
+        }
     }
 }
