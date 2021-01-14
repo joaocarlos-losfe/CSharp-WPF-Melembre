@@ -28,11 +28,9 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Margin="5,0,5,0">
-                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Lembrete"/>
-                    <TextBox x:Name="input_txt" TextWrapping="Wrap" MaxLines="3" MaxLength="185" TextAlignment="Justify" Margin="0,14,0,0" FontSize="15" Height="90" Foreground="#9A9A9A" FontWeight="SemiBold" Padding="5" BorderBrush="Transparent">
-                        <TextBox.Effect>
-                            <DropShadowEffect ShadowDepth="1" Opacity="0.3" Color="#FF999999"/>
-                        </TextBox.Effect>
+                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Digite o Lembrete"/>
+                    <TextBox x:Name="input_txt" TextWrapping="Wrap" MaxLines="3" MaxLength="120" TextAlignment="Justify" Margin="0,14,0,0" FontSize="18" Height="90" Foreground="Black" FontWeight="SemiBold" Padding="5" BorderBrush="WhiteSmoke" BorderThickness="2">
+                        
                     </TextBox>
                 </StackPanel>
 
@@ -103,7 +101,7 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Margin="5,0,5,0">
-                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Frequencia"/>
+                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Frequência"/>
                     <ComboBox x:Name="frequency_select" Margin="0,14,0,0" Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100" >
                         <ComboBoxItem Content="Uma vez" IsSelected="True" />
                         <ComboBoxItem Content="Todo dia"/>

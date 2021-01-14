@@ -87,7 +87,7 @@ namespace Melembre_v2.Views.Dialogs
 
         private void btn_salvar_Click(object sender, RoutedEventArgs e)
         {
-            if (MarquedDays.Count == 0)
+            if (MarquedDays == null || MarquedDays.Count == 0)
             {
                 MessageBox.Show("Nenhum dia foi definido...");
                 MarquedDays = null;

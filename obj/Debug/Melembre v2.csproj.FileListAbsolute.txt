@@ -52,7 +52,6 @@ C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\M
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Memory.dll
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.csprojAssemblyReference.cache
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre.exe.config
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Add.g.cs
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Edit.g.cs
@@ -78,3 +77,4 @@ C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\M
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Dialogs\NewCategory.baml
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Dialogs\FrequencyDays.g.cs
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Dialogs\FrequencyDays.baml
+C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre v2.csprojAssemblyReference.cache

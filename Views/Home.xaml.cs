@@ -42,6 +42,19 @@ namespace Melembre_v2
             this.notifyIcon.Click += new EventHandler(notifyIcon_Click);
         }
 
+        private void setVisibleButtons(bool visible)
+        {
+            if(visible)
+            {
+                conclude_button.Visibility =  edit_button.Visibility = delete_button.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                conclude_button.Visibility = edit_button.Visibility = delete_button.Visibility = Visibility.Hidden;
+            }
+        }
+
+
         private void add_btn_Click(object sender, RoutedEventArgs e)
         {
             AddEdit add = new AddEdit();
@@ -97,13 +110,20 @@ namespace Melembre_v2
         {
             if (getIndex() != -1)
             {
-                int temp_index = getIndex();
-                database.remove(reminders[getIndex()]);
-                reminders.RemoveAt(getIndex());
-                reminders_list_view.Items.RemoveAt(getIndex());
+                if (System.Windows.MessageBox.Show("Deseja realmente excluir o lembrete ?", "Excluir", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    int temp_index = getIndex();
+                    database.remove(reminders[getIndex()]);
+                    reminders.RemoveAt(getIndex());
+                    reminders_list_view.Items.RemoveAt(getIndex());
 
-                timers.RemoveAt(temp_index);
-                reminders_list_view.Items.Refresh();    
+                    timers.RemoveAt(temp_index);
+                    reminders_list_view.Items.Refresh();
+                }
+                else
+                {
+                    return;
+                }
             }
             else
             {
