@@ -27,6 +27,8 @@ namespace Melembre_v2
         public List<Reminder> reminders = new List<Reminder>();
         List<string> timers = new List<string>(); // carregar depois do app
 
+        bool concluded = false;
+
         Database database = new Database();
         string aplication_root_directory = "";
 
@@ -40,6 +42,8 @@ namespace Melembre_v2
             initSystemApp();
 
             this.notifyIcon.Click += new EventHandler(notifyIcon_Click);
+
+            Debug.WriteLine(DateTime.Now.ToString("ddd"));
         }
 
         private void setVisibleButtons(bool visible)
@@ -67,6 +71,7 @@ namespace Melembre_v2
                 timers.Add(add.reminder._Horario + ":00");
                 //o save no database esta direto na classe "Add";
                 ActivateSystemNotification.ReminderAdd(add.reminder);
+                setVisibleButtons(false); 
             }
 
         }
@@ -92,7 +97,8 @@ namespace Melembre_v2
 
                     timers.Insert(temp_index, edit.reminder._Horario + ":00");
                     timers.RemoveAt(temp_index + 1);
-                    
+                    setVisibleButtons(false);
+
                 } 
             }
             else
@@ -119,6 +125,7 @@ namespace Melembre_v2
 
                     timers.RemoveAt(temp_index);
                     reminders_list_view.Items.Refresh();
+                    setVisibleButtons(false);
                 }
                 else
                 {
@@ -208,11 +215,25 @@ namespace Melembre_v2
 
             if (getIndex() != -1)
             {
-                Debug.WriteLine(getIndex());
                 reminder = reminders[getIndex()];
-                reminder.Concluded_color = "#49BABA";
-                reminder.Concluded_text = "✔";
-                reminder.Is_concluded = true;
+
+                
+
+                if (concluded == true)
+                {
+                    Debug.WriteLine(concluded);
+                    reminder.Concluded_color = "#FEA224";
+                    reminder.Concluded_text = "---";
+                    reminder.Is_concluded = false;
+                }
+                else
+                {
+                    Debug.WriteLine(concluded);
+                    reminder.Concluded_color = "#49BABA";
+                    reminder.Concluded_text = "✔";
+                    reminder.Is_concluded = true;
+                }
+
 
                 reminders.Insert(getIndex(), reminder);
                 reminders.RemoveAt(getIndex());
@@ -221,6 +242,8 @@ namespace Melembre_v2
                 reminders_list_view.Items.RemoveAt( getIndex() );
 
                 database.update(reminder, reminder._Horario);
+
+                setVisibleButtons(false);
             }
             else
             {
@@ -245,7 +268,7 @@ namespace Melembre_v2
         //obtem a hora atual
         private void updateTime_tick(object sender, EventArgs e)
         {
-            date_time_app.Text = DateTime.Now.ToString("F");
+            date_time_app.Text = DateTime.Now.ToString("G");
 
             if(timers.Contains(DateTime.Now.ToString("T")))
             {
@@ -272,11 +295,10 @@ namespace Melembre_v2
 
                     reminders.RemoveAt(index);
                     reminders.Insert(index, reminder);
-                    
 
                     reminders_list_view.SelectedItem = reminders[index];
                 }
-                else if(reminders[index].Frequency != "Uma vez" || reminders[index].Frequency != "Todo dia")
+                else if(reminders[index].Frequency != "Uma vez" && reminders[index].Frequency != "Todo dia")
                 {
                     Debug.WriteLine("Freqeuncia personalizada");
                     string[] frequency = reminders[index].Frequency.Split(' ');
@@ -287,6 +309,7 @@ namespace Melembre_v2
                         days.Add(day);
 
                     string abrevDay = DateTime.Now.ToString("ddd");
+                    Debug.WriteLine(abrevDay);
 
                     if(days.Contains(abrevDay))
                     {
@@ -297,7 +320,8 @@ namespace Melembre_v2
                         Reminder reminder = new Reminder();
 
                         reminder = reminders[index];
-                        reminder.Is_already_alarmed = true;
+                        reminder.Is_already_alarmed = false;
+                        reminder.Is_already_alarmed = false;
 
                         database.update(reminder, reminder._Horario);
 
@@ -327,5 +351,37 @@ namespace Melembre_v2
             this.Visibility = Visibility.Visible;  
         }
 
+        private void reminders_list_view_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (reminders_list_view.SelectedIndex != -1)
+            {
+                setVisibleButtons(true);
+
+                Reminder reminder = new Reminder();
+
+                reminder = reminders[reminders_list_view.SelectedIndex];
+
+                if (reminder.Concluded_text == "✔")
+                {
+                    Debug.WriteLine("Tarefa concluida");
+                    concluded = true;
+                    icon_concluded.Text = "---";
+                    conclude_button.ToolTip = "Marcar como não concluido";
+                }
+                else
+                {
+                    Debug.WriteLine("não concluida");
+                    concluded = false;
+                    icon_concluded.Text = "✔";
+                    
+                    conclude_button.ToolTip = "Marcar o lembrete selecionado como concluido";
+
+                }
+
+            }
+                
+            else
+                setVisibleButtons(false);
+        }
     }
 }

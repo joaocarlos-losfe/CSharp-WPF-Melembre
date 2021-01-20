@@ -61,7 +61,6 @@ C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\M
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre_Content.g.cs
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre_MarkupCompile.cache
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Melembre_MarkupCompile.lref
-C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\App.baml
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Add.baml
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Edit.baml
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\obj\Debug\Views\Home.baml

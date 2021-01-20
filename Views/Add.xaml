@@ -27,15 +27,15 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Margin="5,0,5,0">
-                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Digite o Lembrete"/>
+                    <TextBlock FontSize="16" FontWeight="SemiBold" Foreground="#514F56" Text="Digite o Lembrete"/>
                     <TextBox x:Name="input_txt" TextWrapping="Wrap" MaxLines="3" MaxLength="120" TextAlignment="Justify" Margin="0,14,0,0" FontSize="18" Height="90" Foreground="Black" FontWeight="SemiBold" Padding="5" BorderBrush="WhiteSmoke" BorderThickness="2">
                         
                     </TextBox>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Margin="5,0,5,0">
-                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56"  Text="Prioridade"/>
-                    <TextBlock FontSize="18" FontWeight="SemiBold" Foreground="#9A9A9A" TextWrapping="Wrap" Text="Clique em uma cor desejada para definir uma prioridade." />
+                    <TextBlock FontSize="16" FontWeight="SemiBold" Foreground="#514F56"  Text="Prioridade"/>
+                    <TextBlock FontSize="14" FontWeight="SemiBold" Foreground="#9A9A9A" TextWrapping="Wrap" Text="Clique em uma cor desejada para definir uma prioridade." />
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -71,7 +71,7 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Margin="0,30,0,40">
-                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#9A9A9A"  Text="Prioridade definida"/>
+                    <TextBlock FontSize="14" FontWeight="SemiBold" Foreground="#9A9A9A"  Text="Prioridade definida"/>
                     <Grid x:Name="selected_priority"  Margin="0,14,0,0" Height="53" Width="175" HorizontalAlignment="Left" Background="#FF4841">
                         <TextBlock x:Name="selected_text_priority" Text="Alta" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="SemiBold" Foreground="White"/>
                     </Grid>
@@ -84,23 +84,23 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0" Margin="5,0,5,0">
-                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Categoria"/>
+                    <TextBlock FontSize="16" FontWeight="SemiBold" Foreground="#514F56" Text="Categoria"/>
                     <ComboBox x:Name="category_selected" Margin="0,14,0,0" Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100" >
-                        <ComboBoxItem Content="Social" IsSelected="True"/>
-                        <ComboBoxItem Content="Medicação"/>
-                        <ComboBoxItem Content="Lazer"/>
-                        <ComboBoxItem Content="Financeiro"/>
-                        <ComboBoxItem Content="Consulta"/>
-                        <ComboBoxItem Content="Estudos"/>
-                        <ComboBoxItem Content="Médico"/>
-                        <ComboBoxItem Content="Contas"/>
-                        <ComboBoxItem Content="Trabalho"/>
+                        <ComboBoxItem Content="social" IsSelected="True"/>
+                        <ComboBoxItem Content="medicação"/>
+                        <ComboBoxItem Content="lazer"/>
+                        <ComboBoxItem Content="financeiro"/>
+                        <ComboBoxItem Content="consulta"/>
+                        <ComboBoxItem Content="estudos"/>
+                        <ComboBoxItem Content="medico"/>
+                        <ComboBoxItem Content="contas"/>
+                        <ComboBoxItem Content="trabalho"/>
                         <Button Width="350" Content="Outro..." Background="Transparent" BorderThickness="0" Click="Button_Click" />
                     </ComboBox>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Margin="5,0,5,0">
-                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Frequência"/>
+                    <TextBlock FontSize="16" FontWeight="SemiBold" Foreground="#514F56" Text="Frequência"/>
                     <ComboBox x:Name="frequency_select" Margin="0,14,0,0" Background="#F9F9F9"  BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100" >
                         <ComboBoxItem Content="Uma vez" IsSelected="True" />
                         <ComboBoxItem Content="Todo dia"/>
@@ -109,7 +109,7 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Margin="5,30,5,0">
-                    <TextBlock FontSize="20" FontWeight="SemiBold" Foreground="#514F56" Text="Lembrar as"/>
+                    <TextBlock FontSize="16" FontWeight="SemiBold" Foreground="#514F56" Text="Lembrar as"/>
                     <Grid Margin="0,14,0,0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -117,14 +117,14 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Grid.Column="0" Margin="0,0,5,0">
-                            <TextBlock FontSize="15" FontWeight="SemiBold" Foreground="#9A9A9A" Text="Hora" />
+                            <TextBlock FontSize="14" FontWeight="SemiBold" Foreground="#9A9A9A" Text="Hora" />
                             <ComboBox x:Name="hour_select"  Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100">
                                 <ComboBoxItem Content="12" IsSelected="True"/>
                             </ComboBox>
                         </StackPanel>
 
                         <StackPanel Grid.Column="1" Margin="5,0,0,0">
-                            <TextBlock FontSize="15" FontWeight="SemiBold" Foreground="#9A9A9A" Text="Minuto(s)" />
+                            <TextBlock FontSize="14" FontWeight="SemiBold" Foreground="#9A9A9A" Text="Minuto(s)" />
                             <ComboBox x:Name="minut_select" Background="#F9F9F9" BorderBrush="Transparent" BorderThickness="0" FontWeight="SemiBold" FontSize="18" HorizontalContentAlignment="Center" MaxHeight="100">
                                 <ComboBoxItem Content="00" IsSelected="True"/>
                             </ComboBox>

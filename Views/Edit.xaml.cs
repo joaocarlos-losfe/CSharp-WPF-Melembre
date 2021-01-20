@@ -94,8 +94,8 @@ namespace Melembre_v2.Views
                 reminder.Frequency = frequency_select.Text;
 
                 reminder.Is_concluded = temp_is_concluded;
-                reminder.Concluded_color = temp_color;
-                reminder.Concluded_text = temp_Concluded_text;
+                reminder.Concluded_color = "#FEA224";
+                reminder.Concluded_text = "---";
 
                 reminder._Horario = hour_select.Text + ":" + minut_select.Text;
                 database.update(reminder, temp_hour);

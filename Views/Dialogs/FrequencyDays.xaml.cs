@@ -39,9 +39,9 @@ namespace Melembre_v2.Views.Dialogs
         private void Terc_Click(object sender, RoutedEventArgs e)
         {
             if (Terc.IsChecked == true)
-                MarquedDays.Add("terç");
+                MarquedDays.Add("ter");
             else
-                MarquedDays.Remove("terç");
+                MarquedDays.Remove("ter");
         }
 
         private void Qua_Click(object sender, RoutedEventArgs e)
@@ -72,9 +72,9 @@ namespace Melembre_v2.Views.Dialogs
         private void Sab_Click(object sender, RoutedEventArgs e)
         {
             if (Sab.IsChecked == true)
-                MarquedDays.Add("sab");
+                MarquedDays.Add("sáb");
             else
-                MarquedDays.Remove("sab");
+                MarquedDays.Remove("sáb");
         }
 
         private void Dom_Click(object sender, RoutedEventArgs e)
