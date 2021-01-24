@@ -24,8 +24,8 @@
             </Button>
 
             <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
-                <TextBlock Foreground="#8182A1" FontFamily="Segoe MDL2 Assets" Text="&#xEC92;" FontSize="14" VerticalAlignment="Center"/>
-                <TextBlock x:Name="date_time_app" ToolTip="Data e hora atual" Margin="5,0,0,0" Foreground="#8182A1" Text="" FontSize="14" VerticalAlignment="Center"/>
+                
+                <TextBlock x:Name="date_time_app" ToolTip="Data e hora atual" Margin="5,0,0,0" Foreground="Black" Text="" FontSize="14" VerticalAlignment="Center"/>
             </StackPanel>
 
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">

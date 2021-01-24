@@ -70,5 +70,25 @@ namespace Melembre.Source.Services
             toastNotifier.Show(toastNotification);
 
         }
+
+        public static void rememberingDelay(Reminder reminder)
+        {
+            string toastXmlString =
+            $@"<toast><visual>
+            <binding template='ToastGeneric'>
+            <text>{reminder.Reminder_text}</text>
+            <text>Em 1 hora</text>
+            </binding>
+            </visual></toast>";
+            var xmlDoc = new Windows.Data.Xml.Dom.XmlDocument();
+            xmlDoc.LoadXml(toastXmlString);
+
+            var toastNotification = new Windows.UI.Notifications.ToastNotification(xmlDoc);
+            var toastNotifier = Windows.UI.Notifications.ToastNotificationManager.CreateToastNotifier();
+            toastNotification.ExpiresOnReboot = false;
+            toastNotification.Priority = ToastNotificationPriority.High;
+            toastNotifier.Show(toastNotification);
+
+        }
     }
 }

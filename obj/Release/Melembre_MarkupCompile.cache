@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\joaoc\Desktop\UFPI\Engenharia II\Engenharia Projeto\Projeto principal\Melembre v2\App.xaml
-4-390824325
+61816258312
 3759704755
-14-1112355462
+16-408609424
 218-1420825437
-Views\Add.xaml;Views\Edit.xaml;Views\Home.xaml;Views\ReminderAlert.xaml;
+Views\Add.xaml;Views\Dialogs\FrequencyDays.xaml;Views\Dialogs\NewCategory.xaml;Views\Edit.xaml;Views\Home.xaml;Views\ReminderAlert.xaml;
 
 False
 

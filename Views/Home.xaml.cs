@@ -183,31 +183,8 @@ namespace Melembre_v2
                 }
             }
 
-            // getAssosiatesProcess();
 
         }
-
-        //private void getAssosiatesProcess()
-        //{
-        //    Process[] localByName = Process.GetProcessesByName("Melembre");
-
-        //    if(localByName != null )
-        //    {
-
-        //        if(localByName.Length > 1)
-        //        {
-        //            foreach (var pr in localByName)
-        //            {
-        //                if(Process.GetCurrentProcess().ToString() != pr.Id.ToString())
-        //                {
-        //                    Process process_kill = Process.GetProcessById(int.Parse(pr.Id.ToString()));
-        //                    process_kill.Kill();
-
-        //                }
-        //            }
-        //        }
-        //    }   
-        //}
 
         private void conclude_button_Click(object sender, RoutedEventArgs e)
         {
@@ -216,8 +193,6 @@ namespace Melembre_v2
             if (getIndex() != -1)
             {
                 reminder = reminders[getIndex()];
-
-                
 
                 if (concluded == true)
                 {
@@ -270,7 +245,7 @@ namespace Melembre_v2
         {
             date_time_app.Text = DateTime.Now.ToString("G");
 
-            if(timers.Contains(DateTime.Now.ToString("T")))
+            if (timers.Contains(DateTime.Now.ToString("T")))
             {
                 int index = timers.IndexOf(DateTime.Now.ToString("T"));
                 string temp_frequency = "";
@@ -279,7 +254,10 @@ namespace Melembre_v2
                 Debug.WriteLine("era pra alarmar");
                 Debug.WriteLine(reminders[index].Is_already_alarmed + " " + reminders[index].Frequency);
 
+                string current_time = DateTime.Now.ToString("T");
+                string reminder_time = reminders[index]._Horario;
 
+                
                 if ( (reminders[index].Frequency == "Uma vez" && !(reminders[index].Is_already_alarmed)) || reminders[index].Frequency == "Todo dia")
                 {
                     ReminderAlert reminderAlert = new ReminderAlert(reminders[index]);
@@ -289,7 +267,15 @@ namespace Melembre_v2
                     Reminder reminder = new Reminder();
 
                     reminder = reminders[index];
-                    reminder.Is_already_alarmed = true;
+
+                    if(reminder.Frequency == "Uma vez")
+                    {
+                        reminder.Is_already_alarmed = true;
+                    }
+                    else
+                    {
+                        reminder.Is_already_alarmed = false;
+                    }
 
                     database.update(reminder, reminder._Horario);
 
@@ -300,7 +286,6 @@ namespace Melembre_v2
                 }
                 else if(reminders[index].Frequency != "Uma vez" && reminders[index].Frequency != "Todo dia")
                 {
-                    Debug.WriteLine("Freqeuncia personalizada");
                     string[] frequency = reminders[index].Frequency.Split(' ');
 
                     List<string> days = new List<string>();
@@ -309,8 +294,7 @@ namespace Melembre_v2
                         days.Add(day);
 
                     string abrevDay = DateTime.Now.ToString("ddd");
-                    Debug.WriteLine(abrevDay);
-
+                    
                     if(days.Contains(abrevDay))
                     {
                         ReminderAlert reminderAlert = new ReminderAlert(reminders[index]);
@@ -321,8 +305,7 @@ namespace Melembre_v2
 
                         reminder = reminders[index];
                         reminder.Is_already_alarmed = false;
-                        reminder.Is_already_alarmed = false;
-
+                        
                         database.update(reminder, reminder._Horario);
 
                         reminders.RemoveAt(index);
@@ -332,7 +315,6 @@ namespace Melembre_v2
                     }
                 }
 
-                
             }
                
         }

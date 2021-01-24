@@ -92,7 +92,8 @@ namespace Melembre_v2.Views
                 reminder.Priority_color = defalt_color_priority;
                 reminder.Category = category_selected.Text;
                 reminder.Frequency = frequency_select.Text;
-
+                reminder.Is_already_alarmed = false;
+               
                 reminder.Is_concluded = temp_is_concluded;
                 reminder.Concluded_color = "#FEA224";
                 reminder.Concluded_text = "---";
