@@ -11,6 +11,7 @@
 
 <hr>
 <h3>Capturas de tela</h3>
-<img scr="frames/img1.png">
-<br>
-<img scr="frames/img2.png">
+<figure>
+  <img src="frames/img1.png" alt="Minha Figura">
+  <img src="frames/img2.png" alt="Minha Figura">
+</figure>
